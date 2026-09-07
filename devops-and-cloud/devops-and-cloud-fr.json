@@ -1,0 +1,334 @@
+{
+  "personal_information": {
+    "full_name": "Marouane Dbibih",
+    "job_title": "DevOps & Cloud Engineer",
+    "location": "Casablanca, Maroc",
+    "phone": "+212615554445",
+    "email": "marouane@dbibih.com",
+    "mobility": "National",
+    "linkedin": "@marouanedbibih",
+    "github": "@marouanedbibih",
+    "gitlab": "@marouanedbibih"
+  },
+  "summary": "Ingénieur DevOps & Cloud avec une expérience concrète en architectures cloud-native, Kubernetes, automatisation d'infrastructure, pratiques DevSecOps, observabilité, réseaux, virtualisation et sécurité cloud. Expérience dans la conception, le déploiement, la sécurisation et l'exploitation d'infrastructures cloud scalables sur AWS, Azure et OCI.",
+  "skills": {
+    "plateformes_cloud": [
+      "AWS",
+      "Microsoft Azure",
+      "OCI",
+      "GCP"
+    ],
+    "conteneurisation": [
+      "Kubernetes",
+      "K3s",
+      "RKE2",
+      "Amazon EKS",
+      "Azure AKS",
+      "Helm",
+      "Argo CD",
+      "Rancher",
+      "Longhorn",
+      "Docker",
+      "Docker Compose",
+      "Docker Swarm"
+    ],
+    "iac_et_automatisation": [
+      "Terraform",
+      "Ansible",
+      "Bash Scripting",
+      "Python"
+    ],
+    "cicd": [
+      "Jenkins",
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Argo CD"
+    ],
+    "devsecops": [
+      "HashiCorp Vault",
+      "Keycloak",
+      "TLS",
+      "SSL",
+      "OPA Gatekeeper",
+      "SAST",
+      "SCA",
+      "Trivy",
+      "kube-bench",
+      "kube-hunter",
+      "OpenVAS",
+      "CrowdSec",
+      "Fail2ban",
+      "Security Hardening",
+      "SonarQube"
+    ],
+    "observabilite": [
+      "Grafana",
+      "Prometheus",
+      "Loki",
+      "Tempo",
+      "Trace",
+      "AlertManger",
+      "Elasticsearch",
+      "Kibana",
+      "Logstash"
+    ],
+    "reseaux": [
+      "Nginx",
+      "Traefik",
+      "HAProxy"
+    ],
+    "virtualisation": [
+      "VMware",
+      "Proxmox"
+    ],
+    "systemes_exploitation": [
+      "Linux",
+      "Ubuntu",
+      "CentOS",
+      "Windows Server"
+    ],
+    "registres_et_stockage": [
+      "Harbor",
+      "MinIO"
+    ],
+    "bases_de_donnees": [
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "MongoDB",
+      "Redis",
+      "SQL Server"
+    ],
+    "gestion_de_versions": [
+      "Git",
+      "GitHub",
+      "GitLab"
+    ],
+    "developpement": [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud",
+      "React",
+      "Angular",
+      "TypeScript",
+      "REST APIs",
+      "GraphQL",
+      "REST APIs",
+      "gRPC"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Zalar Holding",
+      "position": "DevOps and Cloud Engineer",
+      "period": "Oct. 2025 - Présent",
+      "project": "Gestion et automatisation du déploiement d'applications multi-écosystèmes sur une infrastructure cloud privée et des clusters Kubernetes",
+      "technologies": [
+        "Linux",
+        "Windows Server",
+        "VMware",
+        "Kubernetes",
+        "Helm",
+        "GitLab CI/CD",
+        "SonarQube",
+        "Keycloak",
+        "MinIO",
+        "PostgreSQL",
+        "Grafana",
+        "Prometheus",
+        "Argo CD",
+        "Vault"
+      ]
+    },
+    {
+      "company": "Atlas Cloud Services",
+      "position": "DevSecOps Engineer",
+      "period": "Mars 2025 - Août 2025",
+      "project": "Plateforme GMAO cloud-native",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Jenkins",
+        "SonarQube",
+        "Keycloak",
+        "Vault",
+        "MinIO",
+        "PostgreSQL",
+        "Grafana",
+        "Prometheus"
+      ]
+    },
+    {
+      "company": "IdirTech",
+      "position": "DevOps and Cloud Engineer",
+      "period": "Juil. 2024 - Août 2024",
+      "project": "Plateforme de gestion GPS sur AWS",
+      "technologies": [
+        "AWS",
+        "EC2",
+        "RDS",
+        "S3",
+        "IAM",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "PostgreSQL",
+        "Spring Boot",
+        "Angular"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Flippix — Plateforme cloud-native d'analyse et de sourcing pour vendeurs Amazon",
+      "alias": "Nuriko — Écosystème SaaS pour vendeurs Amazon",
+      "role": "Cloud & DevOps Engineer",
+      "published": "2026-06-08",
+      "description": "Écosystème SaaS cloud-native conçu de bout en bout pour les vendeurs Amazon. Regroupe Flippix (application d'analyse AdonisJS/React pour la découverte de produits, le calcul du ROI et la synchronisation SP-API) et Scrappix (service de scraping de catalogues fournisseurs), avec PostgreSQL, files Redis/BullMQ et MinIO. La plateforme s'exécute sur un cluster Kubernetes (K3s) self-hosted sur Hetzner Cloud, provisionné avec Terraform et Ansible, packagé avec Helm, et déployé via un workflow GitOps strict avec Argo CD (App-of-Apps) et GitHub Actions CI/CD en stage et prod, avec observabilité Prometheus, Grafana, Loki et Promtail.",
+      "highlights": [
+        "Intégration Amazon SP-API",
+        "Ingestion et analyse de catalogues fournisseurs via Scrappix",
+        "CI/CD automatisé avec GitHub Actions (stage & prod)",
+        "Déploiements GitOps via Argo CD App-of-Apps",
+        "Infrastructure as Code avec Terraform et Ansible sur Hetzner Cloud",
+        "Plateforme K3s production-ready avec monitoring et logging"
+      ],
+      "technologies": [
+        "AdonisJS",
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Redis",
+        "MinIO",
+        "Hetzner Cloud",
+        "K3s",
+        "Helm",
+        "Argo CD",
+        "GitHub Actions",
+        "Terraform",
+        "Ansible",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Promtail"
+      ]
+    },
+    {
+      "name": "Plateforme K3s self-managed sur Azure, déployée via GitOps",
+      "alias": "AsemMokllati — Plateforme Kubernetes Azure",
+      "role": "Cloud & DevOps Engineer",
+      "published": "2026-06-10",
+      "description": "Conception et déploiement d'une plateforme cloud-native de type production sur Microsoft Azure avec Terraform, K3s Kubernetes, GitHub Actions, Argo CD, Helm, Longhorn, Vault, Grafana, Prometheus et Loki. Mise en place d'un cluster K3s hautement disponible avec provisioning automatisé, déploiements GitOps, automatisation TLS via cert-manager et Let's Encrypt, monitoring et logging centralisés, pools de workers autoscaling et pipeline CI/CD complet. Workflow entièrement automatisé du provisioning infrastructure au déploiement applicatif et aux opérations day-2.",
+      "highlights": [
+        "Cluster K3s hautement disponible sur Azure",
+        "Workflow GitOps entièrement automatisé",
+        "Provisioning infrastructure avec Terraform",
+        "Pipelines CI/CD avec GitHub Actions",
+        "Stack monitoring, logging et stockage",
+        "Gestion automatisée des certificats TLS",
+        "Autoscaling des worker nodes et opérations day-2"
+      ],
+      "technologies": [
+        "Microsoft Azure",
+        "Terraform",
+        "K3s",
+        "Kubernetes",
+        "Argo CD",
+        "GitHub Actions",
+        "Docker",
+        "GHCR",
+        "Helm",
+        "Longhorn",
+        "HashiCorp Vault",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Promtail"
+      ],
+      "links": [
+        {
+          "label": "Infrastructure",
+          "url": "https://github.com/marouanedbibih/asemmokllati-infra"
+        },
+        {
+          "label": "Argo CD",
+          "url": "https://github.com/marouanedbibih/asemmokllati-argocd"
+        },
+        {
+          "label": "Application",
+          "url": "https://github.com/marouanedbibih/asemmokllati-app"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "IBM DevOps and Software Engineering Professional Certificate"
+    },
+    {
+      "name": "Oracle Cloud Infrastructure 2025 Foundations Associate",
+      "code": "1Z0-1085-25"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabe",
+      "level": "Maternelle"
+    },
+    {
+      "name": "Français",
+      "level": "Courant"
+    },
+    {
+      "name": "Anglais",
+      "level": "Niveau professionnel"
+    }
+  ],
+  "interests": [
+    "Cybersécurité",
+    "Gestion de projet",
+    "Marketing digital",
+    "Taekwondo"
+  ],
+  "ats_keywords": [
+    "AWS",
+    "Azure",
+    "OCI",
+    "Cloud Computing",
+    "DevOps",
+    "DevSecOps",
+    "Kubernetes",
+    "Docker",
+    "Terraform",
+    "Ansible",
+    "Helm",
+    "Argo CD",
+    "Jenkins",
+    "GitHub Actions",
+    "GitLab CI/CD",
+    "Linux",
+    "Infrastructure as Code",
+    "CI/CD",
+    "Cloud Security",
+    "IAM",
+    "Vault",
+    "Keycloak",
+    "Observability",
+    "Monitoring",
+    "Grafana",
+    "Prometheus",
+    "Loki",
+    "Networking",
+    "Microservices",
+    "Containerization",
+    "Site Reliability Engineering",
+    "Platform Engineering",
+    "Automation"
+  ]
+}

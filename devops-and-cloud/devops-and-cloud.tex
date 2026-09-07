@@ -1,0 +1,168 @@
+% !TEX program = pdflatex
+%==============================================================================
+%  CV DevOps & Cloud (FR) — mono-colonne, ATS-friendly, design moderne sobre.
+%  Source : devops-and-cloud-fr.json
+%  Compilation : latexmk -pdf devops-and-cloud.tex
+%==============================================================================
+\documentclass[9pt,a4paper]{extarticle}
+
+\input{devops-and-cloud-data.tex}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% --- Profile photo (circular, top-right of header) ---------------------------
+\newlength{\cvPhotoSize}
+\setlength{\cvPhotoSize}{2.6cm}
+
+\newcommand{\cvProfilePhoto}{%
+  \sbox0{\includegraphics{profile.png}}%
+  \dimen0=\wd0
+  \dimen2=\ht0 \advance\dimen2 by \dp0
+  \begin{tikzpicture}%
+    \clip (0,0) circle (0.5\cvPhotoSize);%
+    \node[inner sep=0pt] at (0,0) {%
+      \ifdim\dimen0>\dimen2
+        \includegraphics[height=\cvPhotoSize]{profile.png}%
+      \else
+        \includegraphics[width=\cvPhotoSize]{profile.png}%
+      \fi
+    };%
+    \draw[primary, line width=0.6pt] (0,0) circle (0.5\cvPhotoSize);%
+  \end{tikzpicture}%
+}
+
+% --- Modern font (Inter → Source Sans Pro → Helvetica) -----------------------
+\IfFileExists{inter.sty}{%
+  \usepackage[sfdefault]{inter}%
+}{%
+  \IfFileExists{sourcesanspro.sty}{%
+    \usepackage[default]{sourcesanspro}%
+    \renewcommand{\familydefault}{\sfdefault}%
+  }{%
+    \usepackage{helvet}%
+    \renewcommand{\familydefault}{\sfdefault}%
+  }%
+}
+
+% --- Layout ------------------------------------------------------------------
+\geometry{left=1.2cm, right=1.2cm, top=0.9cm, bottom=0.9cm}
+\linespread{1.06}
+
+% --- Palette -----------------------------------------------------------------
+\definecolor{primary}{HTML}{003366}
+\definecolor{secondary}{HTML}{1F3A5F}
+\definecolor{rulec}{HTML}{B7C2CC}
+
+\hypersetup{colorlinks=true, urlcolor=primary, linkcolor=primary}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\sloppy
+
+% --- Section title -----------------------------------------------------------
+\newcommand{\cvSection}[1]{%
+  \vspace{0.30em}%
+  {\color{primary}\fontsize{11pt}{14pt}\selectfont\bfseries\MakeUppercase{#1}}\\[-0.45em]
+  {\color{primary}\rule{\linewidth}{0.5pt}}\\[0.18em]%
+}
+
+% --- Header (text left, circular photo right) --------------------------------
+\newcommand{\cvHeader}{%
+  \noindent
+  \begin{minipage}[c]{0.82\textwidth}
+    {\color{primary}\fontsize{18pt}{22pt}\selectfont\bfseries \cvFullName}\\[0.18em]
+    {\color{secondary}\fontsize{10pt}{13pt}\selectfont\bfseries \cvJobTitle}\\[0.28em]
+    {\fontsize{9pt}{12pt}\selectfont
+      \cvLocation \enskip\textbar\enskip
+      \cvPhone \enskip\textbar\enskip
+      \href{mailto:\cvEmail}{\cvEmail}\\[0.10em]
+      \href{https://linkedin.com/in/\cvLinkedIn}{linkedin.com/in/\cvLinkedIn}
+      \enskip\textbar\enskip
+      \href{https://github.com/\cvGitHub}{github.com/\cvGitHub}
+      \enskip\textbar\enskip
+      \href{https://gitlab.com/\cvGitLab}{gitlab.com/\cvGitLab}%
+    }
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.14\textwidth}
+    \raggedleft
+    \IfFileExists{profile.png}{\cvProfilePhoto}{}%
+  \end{minipage}\\[0.18em]
+}
+
+% --- Skill row ---------------------------------------------------------------
+\newcommand{\cvSkill}[2]{%
+  \noindent{\bfseries\color{secondary}#1\,:}\ #2\par
+  \vspace{0.10em}
+}
+
+% --- Experience block --------------------------------------------------------
+\newcommand{\cvExperience}[5]{%
+  \nopagebreak[4]\noindent{\color{primary}\fontsize{10pt}{13pt}\selectfont\bfseries #1}%
+  \ {\fontsize{10pt}{13pt}\selectfont\textbar\ \bfseries #2}%
+  \hfill {\color{secondary}#3}\\[0.12em]
+  {\bfseries\color{secondary}Projet :}\ #4\par
+  \nopagebreak[4]\vspace{0.08em}
+  \nopagebreak[4]{\bfseries\color{secondary}Technologies :}\ #5\par
+  \vspace{0.18em}
+}
+
+% --- Project block -----------------------------------------------------------
+\newcommand{\cvProject}[3]{%
+  \nopagebreak[4]\noindent{\color{primary}\fontsize{10pt}{13pt}\selectfont\bfseries #1}\par
+  \nopagebreak[4]\vspace{0.08em}
+  \nopagebreak[4]#2\par
+  \nopagebreak[4]\vspace{0.08em}
+  \nopagebreak[4]{\bfseries\color{secondary}Technologies :}\ #3\par
+  \vspace{0.16em}
+}
+
+% --- Certification line ------------------------------------------------------
+\newcommand{\cvCertificate}[3]{%
+  \noindent{\bfseries\color{primary}#1} — #2%
+  \if\relax\detokenize{#3}\relax\else\ {\color{secondary}(#3)}\fi\par
+  \vspace{0.12em}
+}
+
+% --- Language item -----------------------------------------------------------
+\newcommand{\cvLanguage}[2]{{\bfseries #1} ({#2})}
+
+\begin{document}
+\enlargethispage{1.0\baselineskip}
+
+\cvHeader
+
+\cvSection{Résumé professionnel}
+\vspace{0.05em}
+\cvSummary
+\vspace{0.05em}
+
+\cvSection{Compétences techniques}
+\cvLoadSkills
+
+\cvSection{Expériences professionnelles}
+\cvLoadExperiences
+
+\cvSection{Projets}
+\cvLoadProjects
+
+\cvSection{Certifications}
+\cvLoadCertificates
+
+\cvSection{Langues}
+\cvLoadLanguages
+
+\cvSection{Centres d'intérêt}
+\cvInterests
+
+\end{document}

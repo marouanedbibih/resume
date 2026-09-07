@@ -1,0 +1,90 @@
+%==============================================================================
+%  DONNÉES DU CV — généré depuis data.json (source de vérité).
+%  Pour modifier le contenu : éditez data.json puis régénérez ce fichier.
+%==============================================================================
+
+% --- Identité & contact ------------------------------------------------------
+\newcommand{\cvFullName}{Marouane Dbibih}
+\newcommand{\cvJobTitle}{DevOps \& Cloud Engineer}
+\newcommand{\cvLocation}{Casablanca, Maroc}
+\newcommand{\cvPhone}{+212\,6\,15\,55\,44\,45}
+\newcommand{\cvEmail}{dbibih.marouane@outlook.com}
+\newcommand{\cvLinkedIn}{marouanedbibih}
+\newcommand{\cvGitHub}{marouanedbibih}
+
+% --- Résumé professionnel ----------------------------------------------------
+\newcommand{\cvSummary}{%
+  Diplômé de l'EMSI et Ingénieur DevOps \& Cloud chez Zalar Holding. Compétences
+  solides en architecture cloud, \textbf{Kubernetes}, réseaux, virtualisation et
+  services hyperscalers. Maîtrise de l'\textbf{automatisation de l'infrastructure},
+  de la \textbf{sécurité cloud}, du stockage et du monitoring.%
+}
+
+% --- Compétences techniques (8 catégories - depuis data.json) ----------------
+\newcommand{\cvLoadSkills}{%
+  \cvSkill{Cybersécurité}{Trivy, Nmap, Wireshark, OpenVAS, Lynis, PAM, Fail2ban, CrowdSec, Vault, Keycloak, OAuth2, OIDC, IAM, TLS, SSL, RBAC, Network Policies, kube-bench, kube-hunter, OPA Gatekeeper}%
+  \cvSkill{DevSecOps}{Jenkins, GitHub Actions, GitLab CI/CD, SAST, SCA, Container Scanning, Secrets Management}%
+  \cvSkill{Kubernetes}{K3s, RKE2, EKS, Helm, Argo CD, Rancher, Longhorn}%
+  \cvSkill{Cloud}{AWS, Azure, Docker, MinIO, Harbor, Proxmox}%
+  \cvSkill{Réseaux}{Load Balancer, NAT, DNS, VPN, Proxy, Traefik, Nginx}%
+  \cvSkill{Monitoring}{Grafana, Prometheus, Loki, Tempo}%
+  \cvSkill{Systèmes}{Linux, Ubuntu, CentOS, Windows Server}%
+  \cvSkill{Infrastructure as Code}{Terraform, Ansible}%
+}
+
+% --- Expériences professionnelles -------------------------------------------
+% cvExperience : {company}{position}{dates}{project}{responsibilities}{technologies}
+\newcommand{\cvLoadExperiences}{%
+  \cvExperience{Zalar Holding}{Infrastructure \& Security Engineer}{Oct. 2025 -- Présent}%
+    {Management et sécurisation des infrastructures locales.}%
+    {Gestion réseau \textbullet\ Gestion systèmes \textbullet\ Hardening \textbullet\ Contrôle d'accès \textbullet\ Sauvegardes \textbullet\ Supervision}%
+    {Windows Server, Linux, Active Directory, VMware, Proxmox, VPN, Firewall, Monitoring, Backup Systems}%
+  \cvExperience{Atlas Cloud Services}{DevSecOps Engineer}{Mars 2025 -- Août 2025}%
+    {Plateforme cloud-native de gestion de maintenance (GMAO).}%
+    {Déploiement Kubernetes \textbullet\ RBAC \textbullet\ TLS \textbullet\ Vault \textbullet\ CI/CD \textbullet\ Monitoring \textbullet\ Observabilité}%
+    {Spring Boot, Java, React, TypeScript, Docker, Kubernetes, Helm, Jenkins, SonarQube, Keycloak, MinIO, PostgreSQL, Prometheus, Grafana}%
+  \cvExperience{IdirTech}{DevSecOps \& Cloud Security Engineer}{Juil. 2024 -- Août 2024}%
+    {Plateforme de gestion GPS sur AWS.}%
+    {Architecture AWS \textbullet\ Conception réseau \textbullet\ IAM \textbullet\ TLS \textbullet\ RBAC \textbullet\ CI/CD \textbullet\ Containerisation \textbullet\ Déploiement Kubernetes}%
+    {Spring Boot, Angular, Docker, Kubernetes, AWS EC2, AWS RDS, AWS S3, AWS IAM, Jenkins, GitHub Actions, PostgreSQL}%
+  \cvExperience{OCP Group}{DevSecOps \& Infrastructure Engineer}{Juillet 2023}%
+    {Plateforme interne de communication.}%
+    {Architecture Cloud \textbullet\ CI/CD sécurisé \textbullet\ Containerisation \textbullet\ Déploiement automatisé \textbullet\ Durcissement applicatif \textbullet\ Durcissement réseau}%
+    {React, TailwindCSS, Laravel, MySQL, Docker, GitHub Actions, Azure Cloud}%
+}
+
+% --- Projets techniques ------------------------------------------------------
+\newcommand{\cvLoadProjects}{%
+  \cvProject{Infrastructure DevSecOps sécurisée sur Kubernetes}%
+    {Déploiement de clusters Kubernetes durcis et mise en place d'une plateforme DevSecOps sécurisée.}%
+    {K3s, RKE2, Helm, Rancher, Jenkins, SonarQube, Harbor, MinIO, Grafana, Prometheus, Loki, Tempo, Vault, Consul, Keycloak, Argo CD, GitLab}%
+  \cvProject{Pipelines CI/CD multi-écosystèmes sécurisés}%
+    {Conception de pipelines CI/CD intégrant SAST, SCA, signature d'images et déploiements sécurisés.}%
+    {Jenkins, Argo CD, Vault, Kubernetes, Helm}%
+  \cvProject{Infrastructure Cloud Azure sécurisée}%
+    {Automatisation Azure via Terraform et déploiement Kubernetes haute disponibilité.}%
+    {Azure, Terraform, Kubernetes, VMSS, Load Balancer, NAT, Argo CD, Vault, Rancher, Grafana}%
+}
+
+% --- Formation ---------------------------------------------------------------
+\newcommand{\cvLoadEducation}{%
+  \cvEducation{Cycle d'ingénierie en Informatique \& Réseaux (MIAGE)}{EMSI Marrakech}{2022 -- 2025}%
+  \cvEducation{Année préparatoire -- Tronc commun}{EMSI Marrakech}{2019 -- 2022}%
+  \cvEducation{Baccalauréat en Sciences Physiques}{Pyramis Groupe Scolaire, Laâyoune}{2017 -- 2019}%
+}
+
+% --- Certifications ----------------------------------------------------------
+\newcommand{\cvLoadCertificates}{%
+  \cvCertificate{IBM DevOps and Software Engineering Professional Certificate}{IBM}{}%
+  \cvCertificate{Oracle Cloud Infrastructure 2025 Foundations Associate (1Z0-1085-25)}{Oracle}{}%
+}
+
+% --- Langues -----------------------------------------------------------------
+\newcommand{\cvLoadLanguages}{%
+  \cvLanguage{Français}{Courant} \enskip\textbullet\enskip
+  \cvLanguage{Anglais}{Intermédiaire} \enskip\textbullet\enskip
+  \cvLanguage{Arabe}{Maternelle}%
+}
+
+% --- Centres d'intérêt -------------------------------------------------------
+\newcommand{\cvInterests}{Marketing digital \enskip\textbullet\enskip Gestion de projet \enskip\textbullet\enskip Taekwondo}

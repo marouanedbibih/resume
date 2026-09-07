@@ -1,0 +1,146 @@
+% !TEX program = pdflatex
+%==============================================================================
+%  CV professionnel — mono-colonne, ATS-friendly, design moderne sobre.
+%  Palette : #003366 (primaire) / #1F3A5F (secondaire) / noir / blanc.
+%  Typographie : Inter (fallback Source Sans Pro, puis Helvetica).
+%  Compilation : latexmk -pdf resume.tex
+%==============================================================================
+\documentclass[9pt,a4paper]{extarticle}
+
+\input{resume-data.tex}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+
+% --- Modern font (Inter → Source Sans Pro → Helvetica) -----------------------
+\IfFileExists{inter.sty}{%
+  \usepackage[sfdefault]{inter}%
+}{%
+  \IfFileExists{sourcesanspro.sty}{%
+    \usepackage[default]{sourcesanspro}%
+    \renewcommand{\familydefault}{\sfdefault}%
+  }{%
+    \usepackage{helvet}%
+    \renewcommand{\familydefault}{\sfdefault}%
+  }%
+}
+
+% --- Layout ------------------------------------------------------------------
+\geometry{left=1.2cm, right=1.2cm, top=1.0cm, bottom=1.0cm}
+\linespread{1.04}
+
+% --- Palette -----------------------------------------------------------------
+\definecolor{primary}{HTML}{003366}
+\definecolor{secondary}{HTML}{1F3A5F}
+\definecolor{rulec}{HTML}{B7C2CC}
+
+\hypersetup{colorlinks=true, urlcolor=primary, linkcolor=primary}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\sloppy
+
+% --- Section title (12pt, primary, underline) -------------------------------
+% Échelle proportionnelle à 9pt body (équivalent visuel de 13pt à 10pt body).
+\newcommand{\cvSection}[1]{%
+  \vspace{0.35em}%
+  {\color{primary}\fontsize{12pt}{14pt}\selectfont\bfseries\MakeUppercase{#1}}\\[-0.55em]
+  {\color{primary}\rule{\linewidth}{0.5pt}}\\[0.20em]%
+}
+
+% --- Header (Name 18pt, professional title, contact) ------------------------
+\newcommand{\cvHeader}{%
+  \begin{center}
+    {\color{primary}\fontsize{18pt}{20pt}\selectfont\bfseries \cvFullName}\\[0.20em]
+    {\color{secondary}\fontsize{10pt}{12pt}\selectfont \cvJobTitle}\\[0.35em]
+    {\fontsize{9pt}{11pt}\selectfont
+      \cvLocation \enskip\textbar\enskip
+      \cvPhone \enskip\textbar\enskip
+      \href{mailto:\cvEmail}{\cvEmail}\\[0.08em]
+      \href{https://linkedin.com/in/\cvLinkedIn}{linkedin.com/in/\cvLinkedIn}
+      \enskip\textbar\enskip
+      \href{https://github.com/\cvGitHub}{github.com/\cvGitHub}%
+    }
+  \end{center}
+}
+
+% --- Skill row (category + items) -------------------------------------------
+\newcommand{\cvSkill}[2]{%
+  \noindent{\bfseries\color{secondary}#1\,:}\ #2\par
+  \vspace{0.12em}
+}
+
+% --- Experience block (compact, inline responsibilities) ---------------------
+% #1 Company  #2 Position  #3 Dates  #4 Project  #5 Responsibilities (inline)  #6 Technologies
+\newcommand{\cvExperience}[6]{%
+  \nopagebreak[4]\noindent{\color{primary}\fontsize{10pt}{12pt}\selectfont\bfseries #1}%
+  \ {\fontsize{10pt}{12pt}\selectfont\textbar\ \textit{#2}}%
+  \hfill {\color{secondary}#3}\\[0.08em]
+  {\bfseries\color{secondary}Projet :}\ #4\par
+  \nopagebreak[4]\vspace{0.02em}
+  \nopagebreak[4]{\bfseries\color{secondary}Réalisations :}\ #5\par
+  \nopagebreak[4]\vspace{0.02em}
+  \nopagebreak[4]{\bfseries\color{secondary}Technologies :}\ #6\par
+  \vspace{0.22em}
+}
+
+% --- Project block -----------------------------------------------------------
+\newcommand{\cvProject}[3]{%
+  \nopagebreak[4]\noindent{\color{primary}\fontsize{10pt}{12pt}\selectfont\bfseries #1}\par
+  \nopagebreak[4]\vspace{0.02em}
+  \nopagebreak[4]#2\par
+  \nopagebreak[4]\vspace{0.02em}
+  \nopagebreak[4]{\bfseries\color{secondary}Technologies :}\ #3\par
+  \vspace{0.18em}
+}
+
+% --- Education line ----------------------------------------------------------
+\newcommand{\cvEducation}[3]{%
+  \noindent{\bfseries\color{primary}#1}, #2 \hfill {\color{secondary}#3}\par
+  \vspace{0.12em}
+}
+
+% --- Certification line ------------------------------------------------------
+\newcommand{\cvCertificate}[3]{%
+  \noindent{\bfseries\color{primary}#1} — #2%
+  \if\relax\detokenize{#3}\relax\else\ {\color{secondary}(#3)}\fi\par
+  \vspace{0.10em}
+}
+
+% --- Language item -----------------------------------------------------------
+\newcommand{\cvLanguage}[2]{{\bfseries #1} ({#2})}
+
+\begin{document}
+\enlargethispage{1.0\baselineskip}
+
+\cvHeader
+
+\cvSection{Résumé professionnel}
+\cvSummary
+
+\cvSection{Compétences techniques}
+\cvLoadSkills
+
+\cvSection{Expériences professionnelles}
+\cvLoadExperiences
+
+\cvSection{Projets techniques}
+\cvLoadProjects
+
+\cvSection{Formation}
+\cvLoadEducation
+
+\cvSection{Certifications}
+\cvLoadCertificates
+
+\cvSection{Langues \& centres d'intérêt}
+\cvLoadLanguages \hfill \cvInterests
+
+\end{document}

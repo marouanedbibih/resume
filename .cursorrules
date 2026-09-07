@@ -1,0 +1,176 @@
+# Resume Project — Cursor Rules
+
+## Project overview
+
+This repository contains LaTeX CVs for **Marouane Dbibih** (DevOps & Cloud Engineer). CVs are **single-page, A4, French-first**, with a modern sober design and ATS-friendly structure.
+
+## Repository structure
+
+```
+resume/
+├── MASTER_CV.md              # Master source of truth (do not invent content absent from here)
+├── data.json                 # Generic CV data
+├── resume.tex                # Generic template (layout, macros, style)
+├── resume-data.tex           # Generic CV content
+├── resume.pdf
+└── devops-and-cloud/
+    ├── devops-and-cloud-fr.json   # French DevOps/Cloud CV data (primary source)
+    ├── devops-and-cloud-en.json   # English DevOps/Cloud CV data
+    ├── devops-and-cloud.tex       # DevOps template (layout, macros, photo, style)
+    ├── devops-and-cloud-data.tex  # DevOps content (regenerate from JSON)
+    ├── devops-and-cloud.pdf
+    └── profile.png                # Circular headshot (top-right of header)
+```
+
+## Workflow
+
+1. **Edit JSON first** (`devops-and-cloud-fr.json` or `devops-and-cloud-en.json`) for content changes.
+2. **Regenerate** the matching `*-data.tex` from JSON.
+3. **Do not edit** `*.tex` templates for day-to-day content updates — only for layout/style changes.
+4. **Compile** after changes:
+   ```bash
+   cd devops-and-cloud && latexmk -pdf devops-and-cloud.tex
+   ```
+5. **Clean aux files**: `latexmk -c`
+
+Engine: **pdflatex** only (`% !TEX program = pdflatex`).
+
+## Content rules (strict)
+
+- **Never invent** experiences, projects, certifications, metrics, or employers not present in `MASTER_CV.md` or the active JSON file.
+- **Do not re-add** removed content (e.g. OCP Group experience) unless the user explicitly asks.
+- **Do not add fake numbers** (uptime %, VM counts, time savings) without user confirmation.
+- Certifications keep their **official English titles**.
+- Job titles stay in **English** (e.g. `DevOps & Cloud Engineer`, `DevSecOps Engineer`).
+
+## Language conventions
+
+### French CV (`devops-and-cloud-fr.json` → French PDF)
+
+- **Translate to French**: summary, section titles, project/experience descriptions, skill category labels, languages, interests.
+- **Keep in English**: tool names, cloud services, technologies, ATS keywords, certification names, GitOps/CI/CD/DevSecOps terms, product names (Flippix, Scrappix, Nuriko, AsemMokllati).
+
+### Section titles (French DevOps CV)
+
+Use separate sections — do **not** merge:
+
+- Résumé professionnel
+- Compétences techniques
+- Expériences professionnelles
+- Projets
+- Certifications
+- Langues
+- Centres d'intérêt
+
+## Skills section
+
+- **One row per JSON category** — do not merge categories unless the user asks or space absolutely requires it (prefer keeping them split).
+- **French category labels**, **English technology values**.
+- Map JSON keys to labels:
+  - `plateformes_cloud` → Plateformes cloud
+  - `conteneurisation` → Conteneurisation
+  - `iac_et_automatisation` → IaC & automatisation
+  - `cicd` → CI/CD
+  - `devsecops` → DevSecOps
+  - `observabilite` → Observabilité
+  - `reseaux` → Réseaux
+  - `virtualisation` → Virtualisation
+  - `systemes_exploitation` → Systèmes d'exploitation
+  - `registres_et_stockage` → Registres & stockage
+  - `bases_de_donnees` → Bases de données
+  - `gestion_de_versions` → Gestion de versions
+  - `developpement` → Développement
+
+## Experience section
+
+Format per entry (`\cvExperience` — 5 args):
+
+1. Company (bold)
+2. Position (bold)
+3. Period — French format: `Oct. 2025 -- Présent`, `Mars 2025 -- Août 2025`, `Juil. 2024 -- Août 2024`
+4. **Projet :** — one short French sentence
+5. **Technologies :** — comma-separated list (English)
+
+No separate "Réalisations" block unless added to JSON.
+
+## Projects section
+
+Format per entry (`\cvProject` — 3 args):
+
+1. **Title** (bold)
+2. **Description** — **1–2 lines maximum**, prose only
+3. **Technologies :** — comma-separated list (English)
+
+### Project description rules
+
+- **No bullet lists** (`\textbullet`, dashes, or inline lists).
+- **No technology names in the description** — tools/stacks go **only** under Technologies.
+- **Flippix / Nuriko**: description must focus on **DevOps & Cloud work** (infra, K3s, IaC, Helm, GitOps, CI/CD, observability, platform ops) — not product/analytics features (ROI, SP-API, seller analytics).
+- **AsemMokllati / Azure K3s**: focus on platform engineering (HA cluster, GitOps, CI/CD, storage, TLS, observability, day-2 ops).
+- Keep descriptions concise to fit **one page**.
+
+## Header & contact
+
+- **Left-aligned** text; **circular photo top-right**.
+- Photo: `profile.png`, **cover-style crop** (fill the circle, no white gaps), ~2.6 cm diameter, thin primary-color border.
+- Contact line includes:
+  - Location: `Casablanca, Maroc`
+  - Phone: `+212 6 15 55 44 45`
+  - Email: `marouane@dbibih.com`
+  - LinkedIn: `linkedin.com/in/marouanedbibih`
+  - GitHub: `github.com/marouanedbibih`
+  - GitLab: `gitlab.com/marouanedbibih`
+
+## LaTeX design system
+
+- Class: `extarticle` 9pt, A4
+- Font: Inter → Source Sans Pro → Helvetica (fallback chain)
+- Colors: primary `#003366`, secondary `#1F3A5F`
+- `\linespread{1.06}` — readable spacing; target **1 page** (adjust spacing before merging content)
+- Margins: 1.2 cm left/right, 0.9 cm top/bottom
+- Company names and job titles: **bold** (not italic)
+- No tables, no footer/header fields, no images except profile photo
+
+## ATS guidelines (when optimizing)
+
+- Use recognizable section names (French or English — be consistent per CV variant).
+- Prefer date formats: `MM/YYYY` or `Mois YYYY -- Mois YYYY`.
+- Include measurable results only when verified with the user.
+- Keep `ats_keywords` in JSON in English; do not remove them.
+- Scan scores depend on matching the **target job** — a DevOps CV will score low against unrelated roles (e.g. Data Analyst).
+
+## JSON schema conventions
+
+When adding/updating entries in `devops-and-cloud-fr.json`:
+
+```json
+{
+  "personal_information": { "full_name", "job_title", "location", "phone", "email", "linkedin", "github", "gitlab" },
+  "summary": "...",
+  "skills": { "<category_key>": ["tech1", "tech2"] },
+  "experience": [{ "company", "position", "period", "project", "technologies" }],
+  "projects": [{ "name", "alias?", "role?", "published?", "description", "highlights?", "technologies", "links?" }],
+  "certifications": [{ "name", "code?" }],
+  "languages": [{ "name", "level" }],
+  "interests": ["..."],
+  "ats_keywords": ["..."]
+}
+```
+
+After JSON edits, sync `devops-and-cloud-data.tex` and recompile.
+
+## What to avoid
+
+- Do not commit unless the user asks.
+- Do not create README or docs files unless requested.
+- Do not merge skill categories without user approval.
+- Do not duplicate technologies in project descriptions.
+- Do not use centered header (left-aligned only).
+- Do not stretch the CV beyond 1 page without telling the user.
+- Do not use `keepaspectratio` letterboxing for the profile photo — always fill the circle.
+
+## Compilation prerequisites
+
+```bash
+sudo apt install texlive-latex-extra texlive-fonts-extra texlive-lang-french latexmk
+```

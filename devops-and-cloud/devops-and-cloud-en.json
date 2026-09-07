@@ -1,0 +1,372 @@
+{
+  "personal_information": {
+    "full_name": "Marouane Dbibih",
+    "job_title": "DevOps & Cloud Engineer",
+    "location": "Casablanca, Morocco",
+    "phone": "+212615554445",
+    "email": "marouane@dbibih.com",
+    "mobility": "National",
+    "linkedin": "@marouanedbibih",
+    "github": "@marouanedbibih",
+    "gitlab": "@marouanedbibih"
+  },
+  "summary": "DevOps & Cloud Engineer with hands-on experience in cloud-native architectures, Kubernetes, infrastructure automation, DevSecOps practices, observability, networking, virtualization, and cloud security. Experienced in designing, deploying, securing, and operating scalable cloud infrastructures across AWS, Azure, and OCI environments.",
+  "skills": {
+    "cloud_platforms": [
+      "Amazon Web Services (AWS)",
+      "Microsoft Azure",
+      "Oracle Cloud Infrastructure (OCI)",
+      "Google Cloud Platform (GCP)"
+    ],
+    "cloud_services": [
+      "EC2",
+      "RDS",
+      "S3",
+      "IAM",
+      "VPC",
+      "EKS",
+      "AKS",
+      "Azure Virtual Machines",
+      "Azure Virtual Networks",
+      "Azure VM Scale Sets",
+      "Azure Load Balancer",
+      "Object Storage"
+    ],
+    "containerization": [
+      "Kubernetes",
+      "K3s",
+      "RKE2",
+      "Amazon EKS",
+      "Azure AKS",
+      "Helm",
+      "Argo CD",
+      "Rancher",
+      "Longhorn",
+      "Docker",
+      "Docker Compose",
+      "Docker Swarm"
+    ],
+    "iac_and_automation": [
+      "Terraform",
+      "Ansible",
+      "Bash Scripting",
+      "Python"
+    ],
+    "cicd": [
+      "Jenkins",
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Argo CD"
+    ],
+    "devsecops": [
+      "HashiCorp Vault",
+      "Keycloak",
+      "TLS",
+      "SSL",
+      "OPA Gatekeeper",
+      "SAST",
+      "SCA",
+      "Trivy",
+      "kube-bench",
+      "kube-hunter",
+      "OpenVAS",
+      "CrowdSec",
+      "Fail2ban",
+      "Security Hardening",
+      "SonarQube"
+    ],
+    "observability": [
+      "Grafana",
+      "Prometheus",
+      "Loki",
+      "Tempo",
+      "Trace",
+      "AlertManger",
+      "Elasticsearch",
+      "Kibana",
+      "Logstash"
+    ],
+    "networking": [
+      "Nginx",
+      "Traefik",
+      "HAProxy"
+    ],
+    "virtualization": [
+      "VMware",
+      "Proxmox"
+    ],
+    "operating_systems": [
+      "Linux",
+      "Ubuntu",
+      "CentOS",
+      "Windows Server"
+    ],
+    "artifact_and_storage": [
+      "Harbor",
+      "MinIO"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "MongoDB",
+      "Redis",
+      "SQL Server"
+    ],
+    "version_control": [
+      "Git",
+      "GitHub",
+      "GitLab"
+    ],
+    "development": [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud",
+      "React",
+      "Angular",
+      "TypeScript",
+      "REST APIs",
+      "GraphQL",
+      "REST APIs",
+      "gRPC"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Zalar Holding",
+      "position": "DevOps and Cloud Engineer",
+      "period": "Oct 2025 - Present",
+      "project": "Management and automations the deployment of application multi ecosystem on private cloud infrastructure on kubernetes clusters",
+      "technologies": [
+        "Linux",
+        "Windows Server",
+        "VMware",
+        "Kubernetes",
+        "Helm",
+        "GitLab CI/CD",
+        "SonarQube",
+        "Keycloak",
+        "MinIO",
+        "PostgreSQL",
+        "Grafana",
+        "Prometheus",
+        "Argo CD",
+        "Vault"
+      ]
+    },
+    {
+      "company": "Atlas Cloud Services",
+      "position": "DevSecOps Engineer",
+      "period": "Mar 2025 - Aug 2025",
+      "project": "Cloud-native CMMS platform",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Jenkins",
+        "SonarQube",
+        "Keycloak",
+        "Vault",
+        "MinIO",
+        "PostgreSQL",
+        "Grafana",
+        "Prometheus"
+      ]
+    },
+    {
+      "company": "IdirTech",
+      "position": "DevOps and Cloud Engineer",
+      "period": "Jul 2024 - Aug 2024",
+      "project": "AWS GPS Management Platform",
+      "technologies": [
+        "AWS",
+        "EC2",
+        "RDS",
+        "S3",
+        "IAM",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "PostgreSQL",
+        "Spring Boot",
+        "Angular"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Flippix — Cloud-Native Amazon Seller Analytics & Sourcing Platform",
+      "role": "Cloud & DevOps Engineer",
+      "description": "Cloud-native SaaS ecosystem built end-to-end for Amazon sellers. Bundles Flippix (AdonisJS/React analytics app for product discovery, ROI calculation and SP-API sync) and Scrappix (supplier catalog scraping service), backed by PostgreSQL, Redis/BullMQ queues and MinIO. The platform runs on a self-hosted Kubernetes (K3s) cluster on Hetzner Cloud, provisioned with Terraform and Ansible, packaged with Helm, and deployed via a strict GitOps workflow using Argo CD (App-of-Apps) and GitHub Actions CI/CD across stage and prod, with Prometheus, Grafana, Loki and Promtail observability.",
+      "highlights": [
+        "Amazon SP-API integration",
+        "Supplier catalog ingestion and analytics via Scrappix",
+        "Automated CI/CD with GitHub Actions (stage & prod)",
+        "GitOps deployments using Argo CD App-of-Apps",
+        "Infrastructure as Code with Terraform and Ansible on Hetzner Cloud",
+        "Production-ready K3s platform with monitoring and logging"
+      ],
+      "technologies": [
+        "AdonisJS",
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Redis",
+        "MinIO",
+        "BullMQ",
+        "Hetzner Cloud",
+        "K3s",
+        "Helm",
+        "Argo CD",
+        "GitHub Actions",
+        "Terraform",
+        "Ansible",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Promtail"
+      ]
+    },
+    {
+      "name": "Self-Managed K3s Platform on Azure, Delivered via GitOps",
+      "role": "Cloud & DevOps Engineer",
+      "description": "Designed and deployed a production-style cloud-native platform on Microsoft Azure using Terraform, K3s Kubernetes, GitHub Actions, Argo CD, Helm, Longhorn, Vault, Grafana, Prometheus and Loki. Built a highly available K3s cluster with automated provisioning, GitOps-driven deployments, TLS automation via cert-manager and Let's Encrypt, centralized monitoring and logging, autoscaling worker pools, and a complete CI/CD pipeline. Delivers a fully automated workflow from infrastructure provisioning to application deployment and day-2 operations.",
+      "highlights": [
+        "Highly available K3s cluster on Azure",
+        "Fully automated GitOps deployment workflow",
+        "Infrastructure provisioning with Terraform",
+        "CI/CD pipelines with GitHub Actions",
+        "Monitoring, logging, and storage stack",
+        "Automated TLS certificate management",
+        "Autoscaling worker nodes and day-2 operations"
+      ],
+      "technologies": [
+        "Microsoft Azure",
+        "Terraform",
+        "K3s",
+        "Kubernetes",
+        "Argo CD",
+        "GitHub Actions",
+        "Docker",
+        "GHCR",
+        "Helm",
+        "Longhorn",
+        "HashiCorp Vault",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Promtail",
+        "cert-manager",
+        "Let's Encrypt"
+      ],
+      "links": [
+        {
+          "label": "Infrastructure",
+          "url": "https://github.com/marouanedbibih/asemmokllati-infra"
+        },
+        {
+          "label": "Argo CD",
+          "url": "https://github.com/marouanedbibih/asemmokllati-argocd"
+        },
+        {
+          "label": "Application",
+          "url": "https://github.com/marouanedbibih/asemmokllati-app"
+        }
+      ]
+    },
+    {
+      "name": "Secure Multi-Ecosystem CI/CD Pipelines",
+      "technologies": [
+        "Jenkins",
+        "GitLab CI/CD",
+        "Argo CD",
+        "Vault",
+        "Kubernetes",
+        "Helm"
+      ]
+    },
+    {
+      "name": "Secure Azure Cloud Infrastructure",
+      "technologies": [
+        "Azure",
+        "Terraform",
+        "Kubernetes",
+        "VMSS",
+        "Load Balancer",
+        "Argo CD",
+        "Vault",
+        "Rancher",
+        "Grafana"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "IBM DevOps and Software Engineering Professional Certificate"
+    },
+    {
+      "name": "Oracle Cloud Infrastructure 2025 Foundations Associate",
+      "code": "1Z0-1085-25"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "Native"
+    },
+    {
+      "name": "French",
+      "level": "Professional"
+    },
+    {
+      "name": "English",
+      "level": "Professional Working Proficiency"
+    }
+  ],
+  "interests": [
+    "Cybersecurity",
+    "Project Management",
+    "Digital Marketing",
+    "Taekwondo"
+  ],
+  "ats_keywords": [
+    "AWS",
+    "Azure",
+    "OCI",
+    "Cloud Computing",
+    "DevOps",
+    "DevSecOps",
+    "Kubernetes",
+    "Docker",
+    "Terraform",
+    "Ansible",
+    "Helm",
+    "Argo CD",
+    "Jenkins",
+    "GitHub Actions",
+    "GitLab CI/CD",
+    "Linux",
+    "Infrastructure as Code",
+    "CI/CD",
+    "Cloud Security",
+    "IAM",
+    "Vault",
+    "Keycloak",
+    "Observability",
+    "Monitoring",
+    "Grafana",
+    "Prometheus",
+    "Loki",
+    "Networking",
+    "Microservices",
+    "Containerization",
+    "Site Reliability Engineering",
+    "Platform Engineering",
+    "Automation"
+  ]
+}

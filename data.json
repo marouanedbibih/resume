@@ -1,0 +1,326 @@
+{
+    "personal_information": {
+      "full_name": "Marouane Dbibih",
+      "title": "DevOps & Cloud Engineer",
+      "location": "Casablanca, Morocco",
+      "mobility": "National",
+      "phone": "+212615554445",
+      "email": "dbibih.marouane@outlook.com",
+      "linkedin": "@marouanedbibih",
+      "github": "@marouanedbibih"
+    },
+  
+    "professional_summary": "Diplômé de l’EMSI et Ingénieur DevOps & Cloud chez Zalar Holding. Compétences solides en architecture cloud, Kubernetes, réseaux, virtualisation et services hyperscalers. Maîtrise de l’automatisation de l’infrastructure, de la sécurité cloud, du stockage et du monitoring.",
+  
+    "education": [
+      {
+        "degree": "Cycle d’ingénierie en informatique et réseaux",
+        "specialization": "MIAGE",
+        "school": "EMSI Marrakech",
+        "start_year": 2022,
+        "end_year": 2025
+      },
+      {
+        "degree": "Année préparatoire - Tronc commun",
+        "school": "EMSI Marrakech",
+        "start_year": 2019,
+        "end_year": 2022
+      },
+      {
+        "degree": "Baccalauréat en sciences physiques",
+        "school": "Pyramis Groupe Scolaire",
+        "city": "Laâyoune",
+        "start_year": 2017,
+        "end_year": 2019
+      }
+    ],
+  
+    "experience": [
+      {
+        "company": "Zalar Holding",
+        "position": "Infrastructure & Security Engineer",
+        "start_date": "2025-10",
+        "end_date": "Present",
+        "project": "Management et sécurisation des infrastructures locales",
+        "responsibilities": [
+          "Gestion réseau",
+          "Gestion systèmes",
+          "Hardening",
+          "Contrôle d'accès",
+          "Sauvegardes",
+          "Supervision"
+        ],
+        "technologies": [
+          "Windows Server",
+          "Linux",
+          "Active Directory",
+          "VMware",
+          "Proxmox",
+          "VPN",
+          "Firewall",
+          "Monitoring",
+          "Backup Systems"
+        ]
+      },
+  
+      {
+        "company": "Atlas Cloud Services",
+        "position": "DevSecOps Engineer",
+        "start_date": "2025-03",
+        "end_date": "2025-08",
+        "project": "Plateforme cloud-native de gestion de maintenance (GMAO)",
+        "responsibilities": [
+          "Déploiement Kubernetes",
+          "RBAC",
+          "TLS",
+          "Vault",
+          "CI/CD",
+          "Monitoring",
+          "Observabilité"
+        ],
+        "technologies": [
+          "Spring Boot",
+          "Java",
+          "React",
+          "TypeScript",
+          "Docker",
+          "Kubernetes",
+          "Helm",
+          "Jenkins",
+          "SonarQube",
+          "Keycloak",
+          "MinIO",
+          "PostgreSQL",
+          "Prometheus",
+          "Grafana"
+        ]
+      },
+  
+      {
+        "company": "IdirTech",
+        "position": "DevSecOps & Cloud Security Engineer",
+        "start_date": "2024-07",
+        "end_date": "2024-08",
+        "project": "Plateforme de gestion GPS sur AWS",
+        "responsibilities": [
+          "Architecture AWS",
+          "Conception réseau",
+          "IAM",
+          "TLS",
+          "RBAC",
+          "CI/CD",
+          "Containerisation",
+          "Déploiement Kubernetes"
+        ],
+        "technologies": [
+          "Spring Boot",
+          "Angular",
+          "Docker",
+          "Kubernetes",
+          "AWS EC2",
+          "AWS RDS",
+          "AWS S3",
+          "AWS IAM",
+          "Jenkins",
+          "GitHub Actions",
+          "PostgreSQL"
+        ]
+      },
+  
+      {
+        "company": "OCP Group",
+        "position": "DevSecOps & Infrastructure Engineer",
+        "start_date": "2023-07",
+        "end_date": "2023-07",
+        "project": "Plateforme interne de communication",
+        "responsibilities": [
+          "Architecture Cloud",
+          "CI/CD sécurisé",
+          "Containerisation",
+          "Déploiement automatisé",
+          "Durcissement applicatif",
+          "Durcissement réseau"
+        ],
+        "technologies": [
+          "React",
+          "TailwindCSS",
+          "Laravel",
+          "MySQL",
+          "Docker",
+          "GitHub Actions",
+          "Azure Cloud"
+        ]
+      }
+    ],
+  
+    "projects": [
+      {
+        "name": "Infrastructure DevSecOps sécurisée sur Kubernetes",
+        "description": "Déploiement de clusters Kubernetes durcis et mise en place d'une plateforme DevSecOps sécurisée.",
+        "technologies": [
+          "K3s",
+          "RKE2",
+          "Helm",
+          "Rancher",
+          "Jenkins",
+          "SonarQube",
+          "Harbor",
+          "MinIO",
+          "Grafana",
+          "Prometheus",
+          "Loki",
+          "Tempo",
+          "Vault",
+          "Consul",
+          "Keycloak",
+          "Argo CD",
+          "GitLab"
+        ]
+      },
+  
+      {
+        "name": "Pipelines CI/CD multi-écosystèmes sécurisés",
+        "description": "Conception de pipelines CI/CD intégrant SAST, SCA, signature d'images et déploiements sécurisés.",
+        "technologies": [
+          "Jenkins",
+          "Argo CD",
+          "Vault",
+          "Kubernetes",
+          "Helm"
+        ]
+      },
+  
+      {
+        "name": "Infrastructure Cloud Azure sécurisée",
+        "description": "Automatisation Azure via Terraform et déploiement Kubernetes HA.",
+        "technologies": [
+          "Azure",
+          "Terraform",
+          "Kubernetes",
+          "VMSS",
+          "Load Balancer",
+          "NAT",
+          "Argo CD",
+          "Vault",
+          "Rancher",
+          "Grafana"
+        ]
+      }
+    ],
+  
+    "skills": {
+      "cybersecurity": [
+        "Trivy",
+        "Nmap",
+        "Wireshark",
+        "OpenVAS",
+        "Lynis",
+        "PAM",
+        "Fail2ban",
+        "CrowdSec",
+        "Vault",
+        "Keycloak",
+        "OAuth2",
+        "OIDC",
+        "IAM",
+        "TLS",
+        "SSL",
+        "RBAC",
+        "Network Policies",
+        "kube-bench",
+        "kube-hunter",
+        "OPA Gatekeeper"
+      ],
+  
+      "devsecops": [
+        "Jenkins",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "SAST",
+        "SCA",
+        "Container Scanning",
+        "Secrets Management"
+      ],
+  
+      "kubernetes": [
+        "K3s",
+        "RKE2",
+        "EKS",
+        "Helm",
+        "Argo CD",
+        "Rancher",
+        "Longhorn"
+      ],
+  
+      "cloud": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "MinIO",
+        "Harbor",
+        "Proxmox"
+      ],
+  
+      "networking": [
+        "Load Balancer",
+        "NAT",
+        "DNS",
+        "VPN",
+        "Proxy",
+        "Traefik",
+        "Nginx"
+      ],
+  
+      "monitoring": [
+        "Grafana",
+        "Prometheus",
+        "Loki",
+        "Tempo"
+      ],
+  
+      "systems": [
+        "Linux",
+        "Ubuntu",
+        "CentOS",
+        "Windows Server"
+      ],
+  
+      "iac": [
+        "Terraform",
+        "Ansible"
+      ]
+    },
+  
+    "certifications": [
+      {
+        "name": "IBM DevOps and Software Engineering Professional Certificate",
+        "issuer": "IBM"
+      },
+      {
+        "name": "Oracle Cloud Infrastructure 2025 Foundations Associate",
+        "code": "1Z0-1085-25",
+        "issuer": "Oracle"
+      }
+    ],
+  
+    "languages": [
+      {
+        "language": "French",
+        "level": "Fluent"
+      },
+      {
+        "language": "English",
+        "level": "Intermediate"
+      },
+      {
+        "language": "Arabic",
+        "level": "Native"
+      }
+    ],
+  
+    "interests": [
+      "Digital Marketing",
+      "Project Management",
+      "Taekwondo"
+    ]
+  }
